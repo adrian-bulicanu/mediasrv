@@ -12,6 +12,12 @@ sudo mkdir /apps/prowlarr
 sudo mkdir /apps/radarr
 sudo mkdir /apps/sonarr
 sudo mkdir /apps/qbittorrent
+sudo mkdir /apps/jackett
+sudo mkdir /apps/monitorrent
+
+sudo chown -R $(id -u -n):$(id -g -n) /data
+sudo chown -R $(id -u -n):$(id -g -n) /apps
+
 
 # podman things
 MEDIA_UID=$(id -u mediasrv)
