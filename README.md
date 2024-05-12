@@ -21,6 +21,8 @@ sh ~/mediasrv/podman-compose/mediasrv-app/register-autostart.sh
 
 The following apps/containers should autostart and be available by WebUI. To access a container from another one, use container name as host:
 
+| app         | port             | comment |
+| ----------- | ---------------- |
 | sonarr      | http://<ip>:8989 | |
 | radarr      | http://<ip>:7878 | |
 | prowlarr    | http://<ip>:9696 | |
