@@ -21,12 +21,12 @@ sh ~/mediasrv/podman-compose/mediasrv-app/register-autostart.sh
 
 The following apps/containers should autostart and be available by WebUI. To access a container from another one, use container name as host:
 
-| app         | port             | comment |
+| app/container | port             | comment |
 | ----------- | ---------------- | ------- |
-| sonarr      | http://<ip>:8989 |         |
-| radarr      | http://<ip>:7878 |         |
-| prowlarr    | http://<ip>:9696 |         |
-| jackett     | http://<ip>:9117 |         |
-| monitorrent | http://<ip>:6687 |         |
-| qbittorrent | http://<ip>:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```podman logs qbittorrent``` |
-| jellyfin    | http://<ip>:8096 |         |
+| sonarr      | http://ipaddr:8989 |         |
+| radarr      | http://ipaddr:7878 |         |
+| prowlarr    | http://ipaddr:9696 |         |
+| jackett     | http://ipaddr:9117 |         |
+| monitorrent | http://ipaddr:6687 |         |
+| qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```podman logs qbittorrent``` |
+| jellyfin    | http://ipaddr:8096 |         |
