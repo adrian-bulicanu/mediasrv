@@ -14,6 +14,7 @@ sudo mkdir /apps/sonarr
 sudo mkdir /apps/qbittorrent
 sudo mkdir /apps/jackett
 sudo mkdir /apps/monitorrent
+sudo mkdir /apps/jellyfin
 
 sudo chown -R $(id -u -n):$(id -g -n) /data
 sudo chown -R $(id -u -n):$(id -g -n) /apps

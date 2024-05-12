@@ -85,3 +85,21 @@ services:
       - TZ=${TZ}
     volumes:
       - /apps/monitorrent:/config
+  jellyfin:
+    # look at https://hub.docker.com/r/linuxserver/jellyfin for hardware acceleration
+    container_name: jellyfin
+    image: lscr.io/linuxserver/jellyfin:latest
+    restart: always
+    ports:
+      - 8096:8096
+      - 7359:7359/udp # allows clients to discover Jellyfin on the local network.
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - JELLYFIN_PublishedServerUrl=${LOCALNETIP} # ip returned to client when discovered
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /apps/jellyfin:/config
+      - /data/media/shows:/data/tvshows
+      - /data/media/movies:/data/movies
