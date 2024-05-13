@@ -84,7 +84,7 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - /apps/monitorrent:/config
+      - /apps/monitorrent/monitorrent.db:/var/www/monitorrent/monitorrent.db
   jellyfin:
     # look at https://hub.docker.com/r/linuxserver/jellyfin for hardware acceleration
     container_name: jellyfin
