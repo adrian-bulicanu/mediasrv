@@ -19,6 +19,7 @@ sudo mkdir /apps/jellyfin
 sudo chown -R $(id -u -n):$(id -g -n) /data
 sudo chown -R $(id -u -n):$(id -g -n) /apps
 
+cp -r ~/mediasrv/default-configs/* /apps/
 
 # podman things
 MEDIA_UID=$(id -u mediasrv)
