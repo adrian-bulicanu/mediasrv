@@ -33,7 +33,7 @@ The following apps/containers should autostart and be available by WebUI. To acc
 | radarr      | http://ipaddr:7878 |         |
 | prowlarr    | http://ipaddr:9696 |         |
 | jackett     | http://ipaddr:9117 |         |
-| monitorrent | http://ipaddr:6687 | default password is monitorrent |
+| monitorrent | http://ipaddr:6687 |         |
 | qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```podman logs qbittorrent``` |
 | jellyfin    | http://ipaddr:8096 | look at https://hub.docker.com/r/linuxserver/jellyfin for enabling hardware acceleration |
 
