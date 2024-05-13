@@ -22,3 +22,6 @@ systemctl --user enable qbittorrent.service
 systemctl --user enable jackett.service
 systemctl --user enable monitorrent.service
 systemctl --user enable jellyfin.service
+
+# enable user services without login
+loginctl enable-linger $(id -u)
