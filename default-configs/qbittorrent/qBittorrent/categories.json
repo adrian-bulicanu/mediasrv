@@ -1,0 +1,17 @@
+{
+    "long-term": {
+        "save_path": ""
+    },
+    "radarr": {
+        "save_path": ""
+    },
+    "removeme": {
+        "save_path": ""
+    },
+    "sonarr": {
+        "save_path": ""
+    },
+    "tv-sonarr": {
+        "save_path": ""
+    }
+}
