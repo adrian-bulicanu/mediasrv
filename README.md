@@ -14,7 +14,10 @@ sh ~/mediasrv/initial-scripts/01_install_podman.sh
 ```
 sh ~/mediasrv/initial-scripts/02_create_mediasrv_infrastructure.sh
 ```
-5. edit the ```~/mediasrv/podman-compose/mediasrv-app/.env```
+5. edit the ```.env``` file
+```
+nano ~/mediasrv/podman-compose/mediasrv-app/.env
+```
 6. execute
 ```
 sh ~/mediasrv/podman-compose/mediasrv-app/update-mediasrv.sh
@@ -30,6 +33,19 @@ The following apps/containers should autostart and be available by WebUI. To acc
 | radarr      | http://ipaddr:7878 |         |
 | prowlarr    | http://ipaddr:9696 |         |
 | jackett     | http://ipaddr:9117 |         |
-| monitorrent | http://ipaddr:6687 |         |
+| monitorrent | http://ipaddr:6687 | default password is monitorrent |
 | qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```podman logs qbittorrent``` |
-| jellyfin    | http://ipaddr:8096 |         |
+| jellyfin    | http://ipaddr:8096 | look at https://hub.docker.com/r/linuxserver/jellyfin for enabling hardware acceleration |
+
+Important pathes:
+* /data/media : media files as follows:
+  * /data/media/downloads : torrents
+  * /data/media/shows : TV shows
+  * /data/media/movies : Movies
+* /apps : configuration and databases for each service. This folder should be backed up.
+  * /apps/radarr
+  * /apps/sonarr
+  * /apps/qbittorrent
+  * /apps/jackett
+  * /apps/monitorrent
+  * /apps/jellyfin
