@@ -1,6 +1,9 @@
 # mediasrv
 
-1. clone the rep.
+1. clone the rep
+```
+git clone https://github.com/adrian-bulicanu/mediasrv.git
+```
 2. execute the scripts
 ```
 sh ~/mediasrv/initial-scripts/00_common_infrastructure.sh
