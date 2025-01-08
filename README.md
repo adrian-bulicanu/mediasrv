@@ -27,8 +27,8 @@ sh ~/mediasrv/podman-compose/mediasrv-app/register-autostart.sh
 
 The following apps/containers should autostart and be available by WebUI. To access a container from another one, use container name as host:
 
-| app/container | port             | comment |
-| ----------- | ---------------- | ------- |
+|app/container| port               | comment |
+| ----------- | ------------------ | ------- |
 | sonarr      | http://ipaddr:8989 |         |
 | radarr      | http://ipaddr:7878 |         |
 | prowlarr    | http://ipaddr:9696 |         |
@@ -36,6 +36,7 @@ The following apps/containers should autostart and be available by WebUI. To acc
 | monitorrent | http://ipaddr:6687 |         |
 | qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```podman logs qbittorrent``` |
 | jellyfin    | http://ipaddr:8096 | look at https://hub.docker.com/r/linuxserver/jellyfin for enabling hardware acceleration |
+|homeassistant| http://ipaddr:8123 | additional ports should be exposed, if required by integration |
 
 Important pathes:
 * /data/media : media files as follows:
@@ -49,3 +50,4 @@ Important pathes:
   * /apps/jackett
   * /apps/monitorrent
   * /apps/jellyfin
+  * /apps/homeassistant
