@@ -12,6 +12,7 @@ podman generate systemd --new qbittorrent   > ~/.config/systemd/user/qbittorrent
 podman generate systemd --new jackett       > ~/.config/systemd/user/jackett.service
 podman generate systemd --new monitorrent   > ~/.config/systemd/user/monitorrent.service
 podman generate systemd --new jellyfin      > ~/.config/systemd/user/jellyfin.service
+podman generate systemd --new homeassistant > ~/.config/systemd/user/homeassistant.service
 
 systemctl --user daemon-reload
 
@@ -22,6 +23,7 @@ systemctl --user enable qbittorrent.service
 systemctl --user enable jackett.service
 systemctl --user enable monitorrent.service
 systemctl --user enable jellyfin.service
+systemctl --user enable homeassistant.service
 
 # enable user services without login
 loginctl enable-linger $(id -u)

@@ -103,3 +103,17 @@ services:
       - /apps/jellyfin:/config
       - /data/media/shows:/data/tvshows
       - /data/media/movies:/data/movies
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:latest"
+    restart: always
+    ports:
+      - 8123:8123
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - /apps/homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro

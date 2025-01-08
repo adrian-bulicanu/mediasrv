@@ -16,6 +16,7 @@ sudo mkdir /apps/jackett
 sudo mkdir /apps/monitorrent
 sudo touch /apps/monitorrent/monitorrent.db
 sudo mkdir /apps/jellyfin
+sudo mkdir /apps/homeassistant
 
 sudo chown -R $(id -u -n):$(id -g -n) /data
 sudo chown -R $(id -u -n):$(id -g -n) /apps
