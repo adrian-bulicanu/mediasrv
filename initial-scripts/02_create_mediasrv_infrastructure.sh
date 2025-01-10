@@ -20,16 +20,9 @@ sudo touch /apps/monitorrent/monitorrent.db
 sudo mkdir /apps/jellyfin
 sudo mkdir /apps/homeassistant
 
-# sudo chown -R $(id -u -n):$(id -g -n) /data
-# sudo chown -R $(id -u -n):$(id -g -n) /apps
-
-cp -r ~/mediasrv/default-configs/* /apps/
+sudo cp -r ~/mediasrv/default-configs/* /apps/
 
 sudo chown -R mediasrv:mediasrv /data
 sudo chown -R mediasrv:mediasrv /apps
-
-# change ownership in podman namespace
-# podman unshare chown -R mediasrv:mediasrv /data/media
-# podman unshare chown -R mediasrv:mediasrv /apps
 
 sudo loginctl enable-linger mediasrv
