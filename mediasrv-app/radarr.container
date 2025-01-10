@@ -4,7 +4,7 @@ Description=radarr
 [Container]
 Image=lscr.io/linuxserver/radarr:latest
 
-PublishPort=8989:8989
+PublishPort=7878:7878
 
 Volume=/etc/localtime:/etc/localtime:ro
 Volume=/apps/radarr:/config
@@ -14,7 +14,7 @@ EnvironmentFile=vars.env
 
 [Service]
 Restart=always
-TimeoutStartSec=7878
+TimeoutStartSec=900
 
 [Install]
 WantedBy=multi-user.target default.target

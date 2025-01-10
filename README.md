@@ -29,7 +29,7 @@ After the first reboot, containers will be downloaded, please be patient. The fo
 | prowlarr    | http://ipaddr:9696 |         |
 | jackett     | http://ipaddr:9117 |         |
 | monitorrent | http://ipaddr:6687 |         |
-| qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```podman logs qbittorrent``` |
+| qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```journalctl -t systemd-qbittorrent --no-pager``` |
 | jellyfin    | http://ipaddr:8096 | look at https://hub.docker.com/r/linuxserver/jellyfin for enabling hardware acceleration |
 |homeassistant| http://ipaddr:8123 | additional ports should be exposed, if required by integration |
 
