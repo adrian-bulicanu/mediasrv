@@ -1,0 +1,19 @@
+[Unit]
+Description=prowlarr
+
+[Container]
+Image=lscr.io/linuxserver/prowlarr:latest
+
+PublishPort=9696:9696
+
+Volume=/etc/localtime:/etc/localtime:ro
+Volume=/apps/prowlarr:/config
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

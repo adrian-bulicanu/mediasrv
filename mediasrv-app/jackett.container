@@ -1,0 +1,19 @@
+[Unit]
+Description=jackett
+
+[Container]
+Image=lscr.io/linuxserver/jackett:latest
+
+PublishPort=9117:9117
+
+Volume=/data/media/downloads:/downloads
+Volume=/apps/jackett:/config
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

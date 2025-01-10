@@ -1,7 +1,9 @@
-# create user and group, without home
-sudo useradd -M mediasrv
+# create user and group
+sudo useradd mediasrv
 sudo groupadd mediasrv
 sudo usermod -a -G mediasrv mediasrv
+sudo mkdir -p /home/mediasrv
+sudo chown mediasrv:mediasrv /home/mediasrv
 
 sudo mkdir /data/media
 sudo mkdir /data/media/downloads
@@ -18,14 +20,16 @@ sudo touch /apps/monitorrent/monitorrent.db
 sudo mkdir /apps/jellyfin
 sudo mkdir /apps/homeassistant
 
-sudo chown -R $(id -u -n):$(id -g -n) /data
-sudo chown -R $(id -u -n):$(id -g -n) /apps
+# sudo chown -R $(id -u -n):$(id -g -n) /data
+# sudo chown -R $(id -u -n):$(id -g -n) /apps
 
 cp -r ~/mediasrv/default-configs/* /apps/
 
-# podman things
-MEDIA_UID=$(id -u mediasrv)
-MEDIA_GID=$(id -g mediasrv)
+sudo chown -R mediasrv:mediasrv /data
+sudo chown -R mediasrv:mediasrv /apps
+
 # change ownership in podman namespace
-podman unshare chown -R $MEDIA_UID:$MEDIA_GID /data/media
-podman unshare chown -R $MEDIA_UID:$MEDIA_GID /apps
+# podman unshare chown -R mediasrv:mediasrv /data/media
+# podman unshare chown -R mediasrv:mediasrv /apps
+
+sudo loginctl enable-linger mediasrv

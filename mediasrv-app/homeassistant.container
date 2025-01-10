@@ -1,0 +1,20 @@
+[Unit]
+Description=homeassistant
+
+[Container]
+Image=ghcr.io/home-assistant/home-assistant:latest
+
+PublishPort=8123:8123
+
+Volume=/etc/localtime:/etc/localtime:ro
+Volume=/apps/homeassistant:/config
+Volume=/run/dbus:/run/dbus:ro
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

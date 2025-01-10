@@ -1,0 +1,22 @@
+[Unit]
+Description=jellyfin
+
+[Container]
+Image=lscr.io/linuxserver/jellyfin:latest
+
+PublishPort=8096:8096
+PublishPort=7359:7359/udp
+
+Volume=/etc/localtime:/etc/localtime:ro
+Volume=/apps/jellyfin:/config
+Volume=/data/media/shows:/data/tvshows
+Volume=/data/media/movies:/data/movies
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

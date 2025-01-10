@@ -8,24 +8,19 @@ git clone https://github.com/adrian-bulicanu/mediasrv.git
 ```
 sh ~/mediasrv/initial-scripts/00_common_infrastructure.sh
 sh ~/mediasrv/initial-scripts/01_install_podman.sh
-```
-3. logoff + logon
-4. execute
-```
 sh ~/mediasrv/initial-scripts/02_create_mediasrv_infrastructure.sh
 ```
-5. edit the ```.env``` file
+3. edit the ```vars.env``` file
 ```
-nano ~/mediasrv/podman-compose/mediasrv-app/.env
+nano ~/mediasrv/mediasrv-app/vars.env
 ```
-6. execute
+4. execute
 ```
-sh ~/mediasrv/podman-compose/mediasrv-app/update-mediasrv.sh
-sh ~/mediasrv/podman-compose/mediasrv-app/register-autostart.sh
+sh ~/mediasrv/initial-scripts/03_configure_podman.sh
 ```
-7. to test, reboot the linux
+5. to test, reboot the linux
 
-The following apps/containers should autostart and be available by WebUI. To access a container from another one, use container name as host:
+The following apps/containers should autostart and be available by WebUI. To access a container from another one, use ```host.containers.internal``` as host:
 
 |app/container| port               | comment |
 | ----------- | ------------------ | ------- |

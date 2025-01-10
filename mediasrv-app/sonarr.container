@@ -1,0 +1,20 @@
+[Unit]
+Description=sonarr
+
+[Container]
+Image=lscr.io/linuxserver/sonarr:latest
+
+PublishPort=8989:8989
+
+Volume=/etc/localtime:/etc/localtime:ro
+Volume=/apps/sonarr:/config
+Volume=/data/media:/data
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

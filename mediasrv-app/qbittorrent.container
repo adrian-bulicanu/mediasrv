@@ -1,0 +1,19 @@
+[Unit]
+Description=qbittorrent
+
+[Container]
+Image=lscr.io/linuxserver/qbittorrent:latest
+
+PublishPort=8080:8080
+
+Volume=/data/media/downloads:/downloads
+Volume=/apps/qbittorrent:/config
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

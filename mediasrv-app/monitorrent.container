@@ -1,0 +1,18 @@
+[Unit]
+Description=monitorrent
+
+[Container]
+Image=docker.io/werwolfby/monitorrent:latest
+
+PublishPort=6687:6687
+
+Volume=/apps/monitorrent/monitorrent.db:/var/www/monitorrent/monitorrent.db
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target
