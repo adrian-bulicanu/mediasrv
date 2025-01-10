@@ -20,7 +20,7 @@ sh ~/mediasrv/initial-scripts/03_configure_podman.sh
 ```
 5. to test, reboot the linux
 
-The following apps/containers should autostart and be available by WebUI. To access a container from another one, use ```host.containers.internal``` as host:
+After the first reboot, containers will be downloaded, please be patient. The following apps/containers should autostart and be available by WebUI. To access a container from another one, use ```host.containers.internal``` as host:
 
 |app/container| port               | comment |
 | ----------- | ------------------ | ------- |
