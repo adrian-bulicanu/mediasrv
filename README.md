@@ -37,12 +37,14 @@ To access a container from another one, use ```host.containers.internal``` as ho
 | qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```journalctl -t systemd-qbittorrent --no-pager``` |
 | jellyfin    | http://ipaddr:8096 | look at https://hub.docker.com/r/linuxserver/jellyfin for enabling hardware acceleration |
 |homeassistant| http://ipaddr:8123 | additional ports should be exposed, if required by integration |
+|syncthing    | http://ipaddr:8384 | WARNING! Open WebUI ASAP and set an username and password! |
 
 Important pathes:
 * /data/media : media files as follows:
   * /data/media/downloads : torrents
   * /data/media/shows : TV shows
   * /data/media/movies : Movies
+  * /data/syncthing : Syncthing
 * /apps : configuration and databases for each service. This folder should be backed up.
   * /apps/radarr
   * /apps/sonarr
@@ -51,3 +53,4 @@ Important pathes:
   * /apps/monitorrent
   * /apps/jellyfin
   * /apps/homeassistant
+  * /apps/syncthing
