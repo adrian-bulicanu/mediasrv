@@ -9,6 +9,7 @@ sudo mkdir /data/media
 sudo mkdir /data/media/downloads
 sudo mkdir /data/media/shows
 sudo mkdir /data/media/movies
+sudo mkdir /data/syncthing
 
 sudo mkdir /apps/prowlarr
 sudo mkdir /apps/radarr
@@ -19,6 +20,7 @@ sudo mkdir /apps/monitorrent
 sudo touch /apps/monitorrent/monitorrent.db
 sudo mkdir /apps/jellyfin
 sudo mkdir /apps/homeassistant
+sudo mkdir /apps/syncthing
 
 sudo cp -r ~/mediasrv/default-configs/* /apps/
 
