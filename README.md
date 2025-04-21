@@ -44,7 +44,7 @@ Important pathes:
   * /data/media/downloads : torrents
   * /data/media/shows : TV shows
   * /data/media/movies : Movies
-  * /data/syncthing : Syncthing
+* /data/syncthing : syncthing
 * /apps : configuration and databases for each service. This folder should be backed up.
   * /apps/radarr
   * /apps/sonarr
