@@ -1,0 +1,19 @@
+[Unit]
+Description=Ryot Application Service
+
+[Container]
+Image=ghcr.io/ignisda/ryot:v8
+
+PublishPort=8000:8000
+
+Environment=SERVER_ADMIN_ACCESS_TOKEN=11ebb3ae554fa9867bff
+Environment=DATABASE_URL=postgres://postgres:postgres@host.containers.internal:5432/ryotdb
+
+EnvironmentFile=vars.env
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target

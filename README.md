@@ -36,6 +36,7 @@ To access a container from another one, use ```host.containers.internal``` as ho
 | monitorrent | http://ipaddr:6687 |         |
 | qbittorrent | http://ipaddr:8080 | after first launch, use temporary admin password and change them. To see the temporary password, see the logs: ```journalctl -t systemd-qbittorrent --no-pager``` |
 | jellyfin    | http://ipaddr:8096 | look at https://hub.docker.com/r/linuxserver/jellyfin for enabling hardware acceleration |
+| ryot       | http://ipaddr:8000 |         |
 |homeassistant| http://ipaddr:8123 | additional ports should be exposed, if required by integration |
 |syncthing    | http://ipaddr:8384 | WARNING! Open WebUI ASAP and set an username and password! |
 
@@ -52,5 +53,6 @@ Important pathes:
   * /apps/jackett
   * /apps/monitorrent
   * /apps/jellyfin
+  * /apps/ryot
   * /apps/homeassistant
   * /apps/syncthing

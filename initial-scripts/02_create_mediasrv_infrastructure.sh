@@ -21,6 +21,7 @@ sudo touch /apps/monitorrent/monitorrent.db
 sudo mkdir /apps/jellyfin
 sudo mkdir /apps/homeassistant
 sudo mkdir /apps/syncthing
+sudo mkdir /apps/ryot
 
 sudo cp -r ~/mediasrv/default-configs/* /apps/
 
